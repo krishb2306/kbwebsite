@@ -1,0 +1,14 @@
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.5px;
+  }
+  
+  section p {
+    color: var(--muted);
+    max-width: 700px;
+  }
+  
+  section + section {
+    border-top: 1px solid #1e293b;
+  }

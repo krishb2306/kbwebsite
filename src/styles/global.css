@@ -1,0 +1,24 @@
+:root {
+    --bg: #1F2421;
+    --bg-light: #1F2421;
+    --text: #FF499E;
+    --accent: #A480CF;
+    --accent-hover: #CF1259;
+  }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+  }
+  
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: var(--accent-hover);
+  }

@@ -1,0 +1,202 @@
+.hero {
+    display: flex;
+    min-height: 97vh;
+    color: var(--text);
+    background: var(--bg);
+  }
+  
+  /* Left side: carousel */
+  .hero-left {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Right side: text */
+  .hero-right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+  }
+  .hero-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--accent-hover) 0 1px,
+      transparent 1px 10px
+    );
+    opacity: 0.1;
+    z-index: 0;
+  }
+  
+  .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.15;
+    z-index: 0;
+  }
+  
+  .shape1 {
+    width: 120px;
+    height: 120px;
+    top: 20%;
+    right: 10%;
+  }
+  
+  .shape2 {
+    width: 60px;
+    height: 60px;
+    bottom: 10%;
+    left: 10%;
+  }
+
+  .shape3 {
+    width: 90px;
+    height: 90px;
+    top: 10%;
+  }
+
+  .shape4 {
+    width: 70px;
+    height: 70px;
+    left: 60%;
+    bottom: 15%; 
+  }
+
+  /* Carousel images */
+  .hero-carousel {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .hero-carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+  }
+  
+  .hero-carousel img.active {
+    opacity: 1;
+  }
+  
+  /* Overlay */
+  .hero-carousel .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: 1;
+  }
+  
+  /* Hero text */
+  .hero-right h1 {
+    font-size: 3rem;
+    margin-bottom: 0rem;
+  }
+  
+  .hero-right h2 {
+    font-size: 1.5rem;
+    color: var(--accent);
+    margin-bottom: 1.1rem;
+  }
+  
+  .hero-right {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    z-index: 2; /* ensures everything inside hero-right is above shapes/overlay */
+  }
+  
+  .hero-buttons a.btn {
+    position: relative;
+    z-index: 2; /* ensures they are clickable above any shapes or overlays */
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    justify-content: flex-start; /* aligns buttons nicely to the left of the text */
+    flex-wrap: wrap; /* makes it responsive if screen is small */
+  }
+  
+  /* Primary Button */
+  .btn.primary {
+    background: var(--accent); /* #DD7596 from your palette */
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 30px; /* fully rounded */
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(223, 18, 89, 0.3); /* subtle shadow */
+  }
+  
+  /* Primary hover */
+  .btn.primary:hover {
+    background: var(--accent-hover); /* slightly darker shade */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(223, 18, 89, 0.4);
+  }
+  
+  /* Secondary Button */
+  .btn.secondary {
+    background: transparent;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  /* Secondary hover */
+  .btn.secondary:hover {
+    background: var(--accent-hover);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(223, 18, 89, 0.3);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Responsive: stack on mobile */
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .hero-left,
+    .hero-right {
+      width: 100%;
+    }
+  
+    .hero-right {
+      padding: 2rem;
+      text-align: center;
+    }
+  }
