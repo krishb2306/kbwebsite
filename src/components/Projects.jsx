@@ -1,10 +1,13 @@
 import "../styles/projects.css";
+import airportImg from "../images/airport.png";
+import spImg from "../images/sp.png";
+import mazeImg from "../images/maze.png";
 
 const projects = [
   {
     title: "Flight Delay Predictor + Airport Scorecard",
     description: "Created with Machine Learning in Python to accurately predict a specifics airplanes delay to the exact minute. Additionally includes a ranking system for each major airport in the U.S.",
-    image: "src/images/airport.png",
+    image: airportImg,
     link: "https://github.com/krishb2306/Flight-Delay-Predictor-Airport-Scorecard",
   },
   {
@@ -15,13 +18,13 @@ const projects = [
       10000+ impressions, with 1000+ downloads.  
       Created with JavaScript, React Native, Expo, and XCode.
     `,
-    image: "src/images/sp.png", // replace with your ScarletParking screenshot
+    image: spImg,
     link: "https://apps.apple.com/us/app/scarletparking/id6744491108", // update if you have repo
   },
   {
     title: "Maze Game",
     description: "Maze Game made through react native which uses your phones accelerometer and recursive backtracking to create a custom maze that you can play with several different levels.",
-    image: "src/images/maze.png",
+    image: mazeImg,
     link: "https://github.com/krishb2306/Maze-Game",
   },
 ];

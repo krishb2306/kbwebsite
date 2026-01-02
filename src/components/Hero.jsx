@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "../styles/hero.css";
 
-const images = [
-  "src/images/final.JPG",
-  "src/images/final2.JPG",
-  "src/images/final3.JPG"
-];
+import img1 from "../images/final.JPG";
+import img2 from "../images/final2.JPG";
+import img3 from "../images/final3.JPG";
+
+const images = [img1, img2, img3];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
